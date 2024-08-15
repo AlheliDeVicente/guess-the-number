@@ -5,7 +5,7 @@ public class HumanPlayer extends Player {
 
     public HumanPlayer(String name, Scanner scanner) {
         super(name);
-        this.scanner = new Scanner(System.in);
+        this.scanner = scanner;
     }
 
     @Override

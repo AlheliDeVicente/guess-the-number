@@ -5,12 +5,13 @@ public class ComputerPlayer extends Player {
 
     public ComputerPlayer() {
         super("Computer");
-        random = new Random(100);
+        random = new Random();
     }
-z
     @Override
     public int makeGuess() {
-        return random.nextInt(100);
+        int guess = random.nextInt(100);
+        guesses.add(guess);
+        return guess;
     }
 }
 

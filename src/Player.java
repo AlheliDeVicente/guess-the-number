@@ -1,9 +1,8 @@
 import java.util.ArrayList;
-import java.util.List;
 
 public abstract class Player {
    public String name;
-   protected List<Integer> guesses;
+   protected ArrayList <Integer> guesses;
 
     public Player(String name) {
         this.name = name;
@@ -11,13 +10,16 @@ public abstract class Player {
     }
 
 
+    //makeguess//
     public abstract int makeGuess();
 
+    //getter público//
     public String getName() {
         return name;
     }
 
-    public List<Integer> getGuesses() {
+    //getter público//
+    public ArrayList<Integer> getGuesses() {
         return guesses;
     }
 
