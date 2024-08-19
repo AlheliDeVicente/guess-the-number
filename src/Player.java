@@ -23,5 +23,8 @@ public abstract class Player {
         return guesses;
     }
 
+    public void reset() {
+        guesses.clear();
+    }
 }
 

@@ -7,6 +7,7 @@ public class ComputerPlayer extends Player {
         super("Computer");
         random = new Random();
     }
+    //computadora crea un número aleatorio y lo añade a la lista//
     @Override
     public int makeGuess() {
         int guess = random.nextInt(100);
