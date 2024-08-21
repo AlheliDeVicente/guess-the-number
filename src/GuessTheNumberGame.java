@@ -3,9 +3,14 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class GuessTheNumberGame {
-  private Random random = new Random(); // nuevo objeto de random//
-  int targetNumber = random.nextInt(100);
+  private Random random; // nuevo objeto de random//
+  int targetNumber;
   static Scanner scanner;
+
+  public GuessTheNumberGame(){
+    this.random = new Random();
+    this.targetNumber = random.nextInt(3);
+  }
 
   public static void setScanner(Scanner scanner) {
     GuessTheNumberGame.scanner = scanner;
@@ -27,18 +32,17 @@ public class GuessTheNumberGame {
     //variable booleana que administra los turnos, incia en true para que se ejecute siempre un turno//
     boolean playTurn = true;
     //mientras se mantenga true se cumple el siguiente loop//
-      while (playTurn) {
+     while (playTurn) {
     //isGuessed falso para que el loop se cumpla muchas veces, el chiste es decirle que el número AUN NO se adivina//
         boolean isGuessed = false;
-    //mientras isGuessed sea falso, turnos para que se chequen los numeros de los jugadores//
-           while (!isGuessed) {
-             isGuessed = game.checkGuess(human);
-      if (!isGuessed){
-        game.checkGuess(computer);
+        //mientras isGuessed sea falso, turnos para que se chequen los numeros de los jugadores//
+          while (!isGuessed) {
+            isGuessed = game.checkGuess(human);
+            if (!isGuessed){
+              game.checkGuess(computer);
       }
     }
    playTurn = game.playAgain(human, computer); //cuando el juego se acabe porque alguien adivinó, llamar a este método para preguntar si quiere jugar otra vez//
-
     }
   }
 

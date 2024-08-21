@@ -123,7 +123,7 @@ class GuessTheNumberGameTest {
         assertFalse(result);
         //acá que se verifique el mensaje de la consola//
         String consoleOutput = consoleMessage.toString().trim();
-        assertTrue(consoleOutput.contains("¡Nos vemos pronto!"));
+        assertTrue(consoleOutput.contains("));¡Nos vemos pronto!"
 }
 @Test
     void playTurn(){
@@ -131,6 +131,7 @@ class GuessTheNumberGameTest {
         Player human = mock(Player.class);
         Player computer = mock(Player.class);
         when(game.checkGuess(human)).thenReturn(false);
+        when(game.checkGuess(human)).thenReturn(true);
         when(game.checkGuess(computer)).thenReturn(false);
         when(game.playAgain(human, computer)).thenReturn(false);
         boolean playTurn = true;
@@ -146,7 +147,7 @@ class GuessTheNumberGameTest {
         }
         verify(game, times(1)).checkGuess(human);
         verify(game, times(1)).checkGuess(computer);
-        verify(game, times(2)).playAgain(human, computer);
+        verify(game, times(1)).playAgain(human, computer);
 }
 }
 

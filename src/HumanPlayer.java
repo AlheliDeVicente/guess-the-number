@@ -4,7 +4,7 @@ public class HumanPlayer extends Player {
     Scanner scanner;
 
     public HumanPlayer(String name, Scanner scanner) {
-        super(name);
+        super(name); //instancia constructor de Player acá//
         this.scanner = scanner;
     }
     //se lee la suposición de la usuaria y se añade a la lista de suposiciones//

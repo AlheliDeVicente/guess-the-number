@@ -12,7 +12,7 @@ public class ComputerPlayer extends Player {
     public int makeGuess() {
         //para cada guess, hace un nuevo número random//
         int guess = random.nextInt(100);
-        //añade ese número randoma  la lista//
+        //añade ese número random a la lista//
         guesses.add(guess);
         return guess;
     }
