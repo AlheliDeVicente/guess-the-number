@@ -10,7 +10,9 @@ public class ComputerPlayer extends Player {
     //computadora crea un número aleatorio y lo añade a la lista//
     @Override
     public int makeGuess() {
+        //para cada guess, hace un nuevo número random//
         int guess = random.nextInt(100);
+        //añade ese número randoma  la lista//
         guesses.add(guess);
         return guess;
     }

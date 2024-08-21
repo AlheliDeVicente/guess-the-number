@@ -24,6 +24,7 @@ public abstract class Player {
     }
 
     public void reset() {
+        //quita todos los elementos de la lista//
         guesses.clear();
     }
 }

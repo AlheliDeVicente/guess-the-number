@@ -13,6 +13,7 @@ public class HumanPlayer extends Player {
         System.out.print("Ingresa tu suposición: ");
         int guess = scanner.nextInt();
         scanner.nextLine();
+        //añade elementos a la lista//
         guesses.add(guess);
         return guess;
     }
